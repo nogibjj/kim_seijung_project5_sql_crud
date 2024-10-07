@@ -1,4 +1,4 @@
-Check CI/CD Status: 
+Check CI/CD Status: [![CI](https://github.com/nogibjj/kim_seijung_project5_sql_crud/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/kim_seijung_project5_sql_crud/actions/workflows/cicd.yml)
 
 # Mini-project #5
 #### Repo Title: Python Script Interacting with SQL Database
