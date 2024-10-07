@@ -5,7 +5,7 @@ Check CI/CD Status:
 #### Author: Seijung Kim (sk591)
 
 ## Overview
-This project aims to connect a SQL database and perform CRUD operations (create, read, update, and delete). The project demonstrates extracting data from a url and load the transformed data into a SQLite database. It executes ETL (Extract, Transform, Load), which is a data pipeline process that takes raw data, transforms it for analysis, and loads it into a database or analytics tool. It also performs CRUD queries and two different SQL queries for analyzing the stored data.
+This project aims to connect a SQL database and perform CRUD operations (create, read, update, and delete). The project demonstrates extracting data from a url and load the transformed data into a SQLite database. It executes ETL (Extract, Transform, Load), which is a data pipeline process that takes raw data, transforms it for analysis, and loads it into a database or analytics tool. It also performs CRUD queries and two additional SQL queries for analyzing the stored data. The `avg_fare_by_embarkation` function calculates and displays the average fare paid by passengers for each embarkation port in the Titanic dataset. The `count_survivors_by_class` function counts and displays the number of surviving passengers in each passenger class.
 
 ## Requirements
 * Connect to a SQL database
@@ -25,11 +25,11 @@ The project includes the files below:
 
 * `Makefile` (with install, format, lint, test, all)
 * `requirements.txt`
-* .devcontainer (with `.devcontainer.json` and `Dockerfile`)
-* .github/workflows for GitHub Actions (with the Matrix Build set up for different Python versions)
-* In `main.py`, there is a simple `generate_sentence()` function that randomly picks articles, adjectives, nouns, and verbs to create a setence with 6 words.
-* In `test_main.py`, there is a test function that checks whether the setence is generated as expected. It will check how many words are in the setence, whether the first letter is capitalized, and whether sentence ends with a period. 
-* In mylib, there are three scripts
+* `.devcontainer` (with `.devcontainer.json` and `Dockerfile`)
+* `.github/workflows` for GitHub Actions (with the Matrix Build set up for different Python versions)
+* In `main.py`, we execute ETL,CRUD operations, and two additional SQL queries which are `avg_fare_by_embarkation` and `count_survivors_by_class`.
+* In `test_main.py`, we check if all ETL and SQL queries have ran successfully.
+* In `mylib`, there are three scripts:
 `extract.py`: extracts a dataset from a URL.
 `query.py`: contains functions including CRUD (create, read, update, and delete) operations.
 `transform_load.py`: loads the transformed data into a SQLite database table using Python's sqlite3 module.
@@ -61,4 +61,8 @@ This project uses the Titanic passenger dataset, which is commonly used in data 
 4. The `test_main.py` contains functions to test the main script. You can use `make test` command to check the test results.
 5. To check the full status of the CI/CD pipeline, navigate to the Actions tab of your repository on GitHub.
 
-## Screenshots of Statistics Generated
+## Screenshot of Database Generated
+
+This is a screenshot of the first 24 rows of data shown in `DB Browser for SQLite`:
+
+![Database Screenshot](DB_screenshot.png)
